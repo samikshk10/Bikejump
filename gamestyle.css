@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     overflow: hidden;
+    font-family: 'Century Gothic',CenturyGothic;
 }
 
 .container{
@@ -10,64 +11,92 @@
     height: 320px;
     background-image: url(Images/sky.jpg);
     background-position: top;
+    top: 20%;
     position: relative; 
     
 }
 
 
 
+
+
+#PlayPauseGame h1{
+    height: 335px;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 99999;
+
+}
+#game{
+    filter: blur(3px);
+ }
+
+
 #vehicle{
     position: absolute;
-   bottom: 0;
+bottom:13px;
+
+    left:0;
     /* background-image: url(Images/car1.png); */
     background-repeat: no-repeat;
-  
+    
      background-size:contain;
-    /* background-size: 132px 150px;
-     */
-     animation: block 0.3s infinite linear;
+  
+
+     /* animation: block 0.3s  linear; */
      z-index:99;
 }
+
+
 
 .jump{
 animation:jump 0.3s linear; 
 
 }
+.rotate{
+    transform: rotate(-20deg);
+}
 
 @keyframes jump{
     0%{
-        top: 140px;
+        top: 90px;
     }
 
     30%{
-        top: 120px;
+        top: 80px;
     }
-
+    
     50%{
-        top: 100px;
+        top: -10px;
     }
-
+    
     80%{
-        top:130px;
+        top: 80px;
     }
-
+    
     100%{
-        top: 185px;
+        top: 90px;
     }
 }
 
-#obstacle{
+#road{
     background-color:red;
     position:absolute;
     bottom:0;
     right:0;
     left:0;
+    right:0;
     background-image: url(Images/road.jpg);
     
     width: 500%;
     height: 60px;
     background-repeat: repeat-x;
     animation: blocks 5s infinite linear;
+    
     z-index: 9;
 }
 
@@ -75,8 +104,51 @@ animation:jump 0.3s linear;
     100%{
     transform: translateX(-3400px);
     }
+}
+
+#obstacle{
+     /* background-image: url(Images/spike.svg); 
+    background-size: contain;   */
+   background-color: brown; 
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 60px;
+    width: 50px;
+    position: absolute;
+    bottom:31px;
+    right:0;
+    z-index:999;
+    border:1px solid black;
+    animation: obstacle 2s infinite linear;
+}
+
+
+
+@keyframes obstacle{
+   
+
 
    
+
+  
+
+100%{
+    transform: translateX(-1800px);
+    overflow: hidden;
 }
+}
+
+
+
+.Score{
+    display: flex;
+    justify-content: right; 
+    padding-right: 20px;
+    font-size: 24px;  
+}
+
+
+
+
 
 
