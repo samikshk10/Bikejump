@@ -31,6 +31,7 @@ var a;
      car.style.backgroundImage="url('Images/bike.png')"
      car.style.height="120px";
      car.style.width="140px";
+   
      a=document.createElement('audio');
      a.setAttribute('src','Sounds/dukebikesound.mp3');
      a.pause();
@@ -55,11 +56,18 @@ var a;
 {
     if(e.code=='Space')
     {
-    document.getElementById('game').style.filter="none";
+        a1=document.createElement('audio');
+        a1.setAttribute('src','Sounds/dukestartsound.mp3');
+        a1.play();
+        document.getElementById('PlayPauseGame').style.display="none";
+        document.getElementById('game').style.filter="none";
+        setTimeout(() => {
             obstacle.style.animationPlayState="running";
 road.style.animationPlayState="running";
+
 a.play();
-document.getElementById('PlayPauseGame').style.display="none";
+       
+  
 
 
 
@@ -87,14 +95,18 @@ document.onkeydown=function(e){
     if(e.key=='ArrowUp')
     {
         car.classList.add('rotate');
+        
+        
+        
     }
  }
 
  document.onkeyup=function(e)
  {
-    if(e.key=='ArrowUp')
-    {
-        car.classList.remove('rotate');
+     if(e.key=='ArrowUp')
+     {
+         car.classList.remove('rotate');
+     
     }
  }
 }
@@ -176,6 +188,7 @@ if(eve.code=='KeyR')
 
 
 
+}, 850);
     }
 }
  
