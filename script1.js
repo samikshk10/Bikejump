@@ -137,7 +137,7 @@ road.style.animationPlayState="paused";
 
 a.pause();
 document.getElementById('PlayPauseGame').style.display="block";
-document.getElementById("show").innerHTML="Game Over<br>"+"Your Score:"+score.innerHTML+"<br>Press R to Play Again";
+document.getElementById("show").innerHTML="Game Over!!!<br>"+"Your Score:"+score.innerHTML+"<br>Press R to Play Again";
 document.getElementById('game').style.filter="blur(3px)";
 clearInterval(isalive);
 
