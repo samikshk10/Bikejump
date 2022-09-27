@@ -170,6 +170,7 @@ else{
     // alert('game over\n Your Score is:'+isalive);
     obstacle.style.animationPlayState="paused";
 road.style.animationPlayState="paused";
+//
 
 a.pause();
 document.getElementById('PlayPauseGame').style.display="block";
