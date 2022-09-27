@@ -147,6 +147,20 @@ if(count==59)
     obstacle.style.animation= "obstacle 1s infinite linear";
 
 }
+
+if(count==159)
+{
+    obstacle.style.animation= "obstacle 0.9s infinite linear";
+
+}
+
+if(count==259)
+{
+    obstacle.style.animation= "obstacle 0.7s infinite linear";
+
+}
+
+
 if(car1.x > obstacle1.x + obstacle1.width || car1.x + car1.width < obstacle1.x || car1.y > obstacle1.y + obstacle1.height || car1.y + car1.height <obstacle1.y)
 {
 
